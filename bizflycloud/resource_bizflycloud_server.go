@@ -287,10 +287,9 @@ func resourceBizFlyCloudServerRead(d *schema.ResourceData, meta interface{}) err
 	if err := d.Set("volume_ids", flatternBizFlyCloudVolumeIDs(server.AttachedVolumes)); err != nil {
 		return fmt.Errorf("Error setting `volume_ids`: %+v", err)
 	}
-
-	if err := d.Set("lan_ip", flatternBizFlyCloudIPs(server.IPAddresses.LanAddresses)); err != nil {
-		return fmt.Errorf("Error setting `lan_ip`: %+v", err)
-	}
+	// if err := d.Set("lan_ip", flatternBizFlyCloudIPs(server.IPAddresses.LanAddresses)); err != nil {
+	// 	return fmt.Errorf("Error setting `lan_ip`: %+v", err)
+	// }
 	if err := d.Set("wan_ipv4", flatternBizFlyCloudIPs(server.IPAddresses.WanV4Addresses)); err != nil {
 		return fmt.Errorf("Error setting `wan_ipv4`: %+v", err)
 	}

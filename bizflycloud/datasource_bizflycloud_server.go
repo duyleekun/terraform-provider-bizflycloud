@@ -104,10 +104,10 @@ func datasourceBizFlyCloudServers() *schema.Resource {
 				Elem:     &schema.Schema{Type: schema.TypeString},
 				Computed: true,
 			},
-			"lan_ip": {
-				Type:     schema.TypeString,
-				Computed: true,
-			},
+			// 			"lan_ip": {
+			// 				Type:     schema.TypeString,
+			// 				Computed: true,
+			// 			},
 			"wan_ipv4": {
 				Type:     schema.TypeSet,
 				Elem:     &schema.Schema{Type: schema.TypeString},
